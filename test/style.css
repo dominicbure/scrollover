@@ -1,7 +1,7 @@
 .trash1 {}
 
 @-skrollr-keyframes external1 {
-	100 {
+	100% {
 		transform :  rotate(100deg);
 	}
 }
@@ -15,11 +15,11 @@
 }
 
 @-skrollr-keyframes ignore1 {
-	0 {
+	0% {
 		left:0px;
 	}
 
-	100 {
+	100% {
 		left:100px;
 	}
 }
@@ -32,11 +32,11 @@
 }
 
 @-skrollr-keyframes external1 {
-	0  {
+	0%  {
 		bottom:0px;
 	}
 
-	100
+	100%
 	{
 		bottom:100px;
 	}
@@ -47,11 +47,11 @@
 }
 
 @-skrollr-keyframes precedence1 {
-	0 {
+	0% {
 		top:1337px;
 	}
 
-	100 {
+	100% {
 		top:100px;
 	}
 }
