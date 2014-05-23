@@ -11,17 +11,17 @@
 	var contents = [];
 
 	//Finds the declaration of an animation block.
-	var rxAnimation = /@(?:-skrollr-)?keyframes\s+([\w-%]+)/g;
+	var rxAnimation = /@(?:-skrollr-)?keyframes\s+([\w-]+)/g;
 
 	//Finds the block of keyframes inside an animation block.
 	//http://regexpal.com/ saves your ass with stuff like this.
 	var rxKeyframes = /\s*\{\s*((?:[^{]+\{[^}]*\}\s*)+?)\s*\}/g;
 
 	//Gets a single keyframe and the properties inside.
-	var rxSingleKeyframe = /([\w\-%]+)\s*\{([^}]+)\}/g;
+	var rxSingleKeyframe = /([\w\-]+)%?\s*\{([^}]+)\}/g;
 
 	//Finds usages of the animation.
-	var rxAnimationUsage = /(?:-skrollr-)?animation-name\s*:\s*([\w-%]+)/g;
+	var rxAnimationUsage = /(?:-skrollr-)?animation-name\s*:\s*([\w-]+)/g;
 
 	//Finds usages of attribute setters.
 	var rxAttributeSetter = /-skrollr-(anchor-target|smooth-scrolling|emit-events)\s*:\s*['"]([^'"]+)['"]/g;
@@ -204,7 +204,7 @@
 			for(keyframeName in keyframes) {
 				for(elementIndex = 0; elementIndex < elements.length; elementIndex++) {
 					curElement = elements[elementIndex];
-					attributeName = 'data-' + keyframeName.replace('%', '');
+					attributeName = 'data-' + keyframeName;
 					attributeValue = keyframes[keyframeName];
 
 					//If the element already has this keyframe inline, give the inline one precedence by putting it on the right side.
