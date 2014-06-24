@@ -18,4 +18,4 @@ Usage
 
 ```
 
-See https://github.com/Prinzhorn/skrollr for infos on skrollr.
+Based on [skrollr-stylesheets](https://github.com/Prinzhorn/skrollr-stylesheets)
