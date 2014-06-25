@@ -36,10 +36,11 @@ module.exports = function(grunt) {
 
 			all: {
 				files: {
-					'dist/scrollover.min.js': [
+					'dist/scrollover.pack.js': [
                         'src/scrollover.js',
                         'node_modules/skrollr/src/skrollr.js',
                         //'node_modules/skrollr/dist/skrollr.min.js',
+                        'src/skrollr-init.js',
                     ],
 				}
 			}

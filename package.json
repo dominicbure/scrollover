@@ -1,7 +1,7 @@
 {
   "name": "scrollover",
   "description": "Make CSS animations scroll activated",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "homepage": "https://github.com/quadroid/scrollover",
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
       "url": "https://github.com/quadroid/scrollover/blob/master/LICENSE.txt"
     }
   ],
-  "main": "dist/scrollover.min.js",
+  "main": "dist/scrollover.pack.js",
   "engines": {
     "node": ">=0.8"
   },
@@ -31,7 +31,8 @@
     "grunt": "~0.4.1",
     "grunt-contrib-uglify": "~0.2.0",
     "grunt-contrib-jshint": "~0.3.0",
-    "grunt-contrib-qunit": "~0.2.0"
+    "grunt-contrib-qunit": "~0.2.0",
+    "animate.css": "^3.1.1"
   },
   "keywords": []
 }
