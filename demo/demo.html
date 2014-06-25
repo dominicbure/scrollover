@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scrollover demo</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+        .slide {
+            min-height:100%;
+            border-top: 1px dotted red;
+            text-align: center;
+        }
+
+    </style>
+    <style data-skrollr-stylesheet>
+        .scrollover {
+            -skrollr-anchor-target: ".slide";
+        }
+    </style>
+    <link rel="stylesheet" Xdata-skrollr-stylesheet href="../bower_components/animate.css/source/flippers/flip.css"/>
+    <script src="../src/scrollover.js"></script>
+    <script src="../node_modules/skrollr/src/skrollr.js"></script>
+    <script>skrollr.init()</script>
+</head>
+<body>
+
+<div class="slide">
+    <h1>Slide 1</h1>
+    text
+    <div class="scrollover bounce">scrollover</div>
+</div>
+<div class="slide">
+    <h1>Slide 2</h1>
+    text
+    <div class="scrollover ">scrollover</div>
+</div>
+<div class="slide">
+    <h1>Slide 3</h1>
+    text
+    <div class="scrollover">scrollover</div>
+</div>
+
+</body>
+</html>
