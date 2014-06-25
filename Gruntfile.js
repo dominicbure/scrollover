@@ -2,6 +2,7 @@ module.exports = function(grunt) {
 	//Configuration.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json') ,
+        skrollrPkg: grunt.file.readJSON('node_modules/skrollr/package.json') ,
 		jshint: {
 			options: {
 				smarttabs: false,
@@ -30,12 +31,16 @@ module.exports = function(grunt) {
 		},
 		uglify: {
 			options: {
-				banner: '/*! skrollr-stylesheets <%= pkg.version %> (<%= grunt.template.today("yyyy-mm-dd") %>) | Alexander Prinzhorn - https://github.com/Prinzhorn/skrollr-stylesheets | Free to use under terms of MIT license */\n'
+				banner: '/*! scrollover <%= pkg.version %> + skrollr <%= skrollrPkg.version %> (<%= grunt.template.today("yyyy-mm-dd") %>) | https://github.com/quadroid/scrollover */\n'
 			},
 
 			all: {
 				files: {
-					'dist/skrollr.stylesheets.min.js': ['src/skrollr.stylesheets.js'],
+					'dist/scrollover.min.js': [
+                        'src/scrollover.js',
+                        'node_modules/skrollr/src/skrollr.js',
+                        //'node_modules/skrollr/dist/skrollr.min.js',
+                    ],
 				}
 			}
 		}
