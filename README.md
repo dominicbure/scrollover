@@ -36,10 +36,12 @@ Usage
   }
 }
 </style>
+<script src="scrollover.pack.js"></script>
 ```
 Demo
 -----
 http://prinzhorn.github.io/skrollr/
 
 
+-----
 Based on [skrollr-stylesheets](https://github.com/Prinzhorn/skrollr-stylesheets)
