@@ -7,39 +7,40 @@
             height: 100%;
         }
         .slide {
-            min-height:100%;
-            border-top: 1px dotted red;
+            min-height: 100%;
+
             text-align: center;
+            border-top: 1px dotted red;
         }
 
     </style>
-    <style data-skrollr-stylesheet>
-        .scrollover {
+    <style>
+        .onscroll {
             -skrollr-anchor-target: ".slide";
         }
     </style>
-    <link rel="stylesheet" Xdata-skrollr-stylesheet href="../node_modules/animate.css/source/flippers/flip.css"/>
-    <script src="../src/scrollover.js"></script>
-    <script src="../node_modules/skrollr/src/skrollr.js"></script>
-    <script>skrollr.init()</script>
+    <link rel="stylesheet" data-skrollr-stylesheet href="../node_modules/animate.css/source/rotating_entrances/rotateIn.css"/>
 </head>
 <body>
 
 <div class="slide">
     <h1>Slide 1</h1>
     text
-    <div class="scrollover bounce">scrollover</div>
+    <div class="onscroll rotateIn">scrollover</div>
 </div>
 <div class="slide">
     <h1>Slide 2</h1>
     text
-    <div class="scrollover ">scrollover</div>
+    <div class="onscroll ">scrollover</div>
 </div>
 <div class="slide">
     <h1>Slide 3</h1>
     text
-    <div class="scrollover">scrollover</div>
+    <div class="onscroll ">scrollover</div>
 </div>
 
 </body>
+<script src="../src/skrollr-init.js"></script>
+<script src="../src/scrollover.js"></script>
+<script src="../node_modules/skrollr/src/skrollr.js"></script>
 </html>
