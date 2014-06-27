@@ -44,4 +44,4 @@ http://prinzhorn.github.io/skrollr/
 
 
 -----
-Based on [skrollr-stylesheets](https://github.com/Prinzhorn/skrollr-stylesheets)
+Based on [skrollr](https://github.com/Prinzhorn/skrollr) [stylesheets](https://github.com/Prinzhorn/skrollr-stylesheets)
