@@ -1,11 +1,11 @@
 (function(){'use strict';
 
     var skrollr = window.skrollr;
-    if( skrollr && !('init' in skrollr) ){
-        var config = skrollr;
+    if( skrollr && ! skrollr.init ){
+        var options = skrollr;
     }
 
     window.addEventListener('load', function(){
-        window.skrollr.init( config );
+        window.skrollr.init( options );
     });
 })();

@@ -1,8 +1,9 @@
 module.exports = function(grunt) {
+    var skrollrPath = 'node_modules/skrollr/';
 	//Configuration.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json') ,
-        skrollrPkg: grunt.file.readJSON('node_modules/skrollr/package.json') ,
+        skrollrPkg: grunt.file.readJSON(skrollrPath + 'package.json') ,
 		jshint: {
 			options: {
 				smarttabs: false,
@@ -34,17 +35,16 @@ module.exports = function(grunt) {
 				banner: '/*! scrollover <%= pkg.version %> + skrollr <%= skrollrPkg.version %> (<%= grunt.template.today("yyyy-mm-dd") %>) | https://github.com/quadroid/scrollover */\n'
 			},
 
-			all: {
-				files: {
-					//'dist/scrollover.min.js': ['src/scrollover.js'],
-					'dist/scrollover.pack.js': [
+            all: {
+                files: {
+                    //'dist/scrollover.min.js': ['src/scrollover.js'],
+                    'dist/scrollover.pack.js': [
                         'src/skrollr-init.js',
                         'src/scrollover.js',
-                        'node_modules/skrollr/src/skrollr.js',
-                        //'node_modules/skrollr/dist/skrollr.min.js',
-                    ],
-				}
-			}
+                        skrollrPath + 'src/skrollr.js'
+                    ]
+                }
+            }
 		}
 	});
 
@@ -54,6 +54,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 	//Tasks.
-	grunt.registerTask('default', ['jshint', 'qunit', 'uglify']);
-	grunt.registerTask('travis', ['jshint', 'qunit']);
+	grunt.registerTask('default', [/*'jshint',*/ 'qunit', 'uglify']);
+	grunt.registerTask('travis',  [/*'jshint',*/ 'qunit']);
 };

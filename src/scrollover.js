@@ -1,7 +1,7 @@
 /*!
  * skrollr stylesheets.
- * Parses stylesheets and searches for skrollr keyframe declarations.
- * Converts them to data-attributes.
+ * Parses stylesheets and searches for keyframe declarations.
+ * Converts them to skrollr data-attributes.
  * Doesn't expose any globals.
  */
 (function(window, document, undefined) {
@@ -213,6 +213,7 @@
 					if(curElement.hasAttribute(attributeName)) {
 						attributeValue += curElement.getAttribute(attributeName);
 					}
+
 					curElement.setAttribute(attributeName, attributeValue);
 				}
 			}

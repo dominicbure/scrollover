@@ -2,15 +2,18 @@
 <html>
 <head>
     <title>Scrollover demo</title>
+    <link rel="stylesheet" data-skrollr-stylesheet href="node_modules/animate.css/animate.css"/>
     <style>
         html, body {
             height: 100%;
+            font: 120% sans-serif;
         }
+        h1 {margin-top: 25%}
         .slide {
             min-height: 100%;
 
             text-align: center;
-            border-top: 1px dotted red;
+            border-top: 1px dashed grey;
         }
 
     </style>
@@ -19,7 +22,6 @@
             -skrollr-anchor-target: ".slide";
         }
     </style>
-    <link rel="stylesheet" data-skrollr-stylesheet href="../node_modules/animate.css/source/rotating_entrances/rotateIn.css"/>
 </head>
 <body>
 
@@ -31,16 +33,18 @@
 <div class="slide">
     <h1>Slide 2</h1>
     text
-    <div class="onscroll ">scrollover</div>
+    <div class="onscroll rollIn">scrollover</div>
 </div>
 <div class="slide">
     <h1>Slide 3</h1>
     text
-    <div class="onscroll ">scrollover</div>
+    <div class="onscroll bounce">scrollover</div>
 </div>
 
 </body>
-<script src="../src/skrollr-init.js"></script>
-<script src="../src/scrollover.js"></script>
-<script src="../node_modules/skrollr/src/skrollr.js"></script>
+
+<script src="src/skrollr-init.js"></script>
+<script src="src/scrollover.js"></script>
+<script src="node_modules/skrollr/src/skrollr.js"></script>
+
 </html>

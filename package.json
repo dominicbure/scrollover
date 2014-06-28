@@ -1,7 +1,7 @@
 {
   "name": "scrollover",
   "description": "Make CSS animations scroll activated",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "homepage": "https://github.com/quadroid/scrollover",
   "repository": {
     "type": "git",
